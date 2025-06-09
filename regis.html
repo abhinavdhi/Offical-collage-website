@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+ 
+    <section class="header">
+        <div class="nav-bar">
+            <nav>
+                <div class="logo">
+                    <img src="images/GBU logo.png" alt="University Logo" class="university-logo">
+                </div>
+                <a id="logo-text" class="typing-effect">SCHOOL OF ICT</a>
+                <div class="registration-portal">
+                    <a href="login.php">Student Login</a>
+                </div>
+                <div class="registration-portal">
+                    <a href="index.html">Home</a>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Registration Form Section -->
+    <div class="container">
+        <!-- Registration Form Header -->
+        <div class="header">
+            <h1>SCHOOL OF INFORMATION AND COMMUNICATION TECHNOLOGY</h1>
+            <h2>GAUTAM BUDDHA UNIVERSITY, GREATER NOIDA</h2>
+            <h3>REGISTRATION FORM FOR ACADEMIC SESSION 2024-25(Even Sem)</h3>
+        </div>
+
+        <!-- Personal Details Section -->
+        <div class="section">
+            <h3>Personal Details</h3>
+            <form action="preview_registration.php" method="POST">
+                <div class="form-field">
+                    <label for="rollNumber">Roll Number:</label>
+                    <input type="text" id="rollNumber" name="rollNumber" placeholder="123/ABC/123" required>
+                </div>
+                <div class="form-field">
+                    <label for="fullName">Student's Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" required>
+                </div>
+                <div class="form-field">
+                    <label for="fathersName">Father's / Husband's Name:</label>
+                    <input type="text" id="fathersName" name="fathersName" placeholder="Enter Father's / Husband's Name" required>
+                </div>
+                <div class="form-field">
+                    <label for="nameOfProgramme">Name of Programme:</label>
+                    <select id="nameOfProgramme" name="nameOfProgramme" required>
+                        <option value="">Select Programme</option>
+                        <option value="B.tech">B.TECH</option>
+                        <option value="Integrated B.tech + M.tech">Integrated B.tech + M.tech</option>
+                        <option value="BCA">BCA</option>
+                        <option value="M.tech">M.tech</option>
+                        <option value="MCA">MCA</option>
+                        <option value="PHD">PHD</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="branchSpecialization">Branch / Specialization:</label>
+                    <select id="branchSpecialization" name="branchSpecialization" required>
+                        <option value="">Select Branch / Specialization</option>
+                        <option value="CSE">CSE</option>
+                        <option value="CSE (AI)">CSE (AI)</option>
+                        <option value="CSE (Cyber Security)">CSE (Cyber Security)</option>
+                        <option value="CSE (Data Science)">CSE (Data Science)</option>
+                        <option value="CSE (Internet of Things)">CSE (IoT)</option>
+                        <option value="CSE (Machine Learning)">CSE (ML)</option>
+                        <option value="ECE">ECE</option>
+                        <option value="ECE (AI/ML)">ECE (AI/ML)</option>
+                        <option value="IT">IT</option>
+                         <option value="Integrated B.tech + M.tech CSE">Integrated B.tech + M.tech CSE</option>
+                        <option value="Integrated B.tech + M.tech CSE(AI and Robotics)">Integrated B.tech + M.tech CSE(AI and Robotics)</option>
+                        <option value="Integrated B.tech + M.tech CSE(Data Science)">Integrated B.tech + M.tech CSE(Data Science)</option>
+                        <option value="Integrated B.tech + M.tech CSE(Software Engineering)">Integrated B.tech + M.tech CSE(Software Engineering)</option>
+                        <option value="Integrated B.tech + M.tech CSE(Wireless Communication and Networks)">Integrated B.tech + M.tech CSE(Wireless Communication and Networks)</option>
+                        <option value="Integrated B.tech + M.tech ECE">Integrated B.tech + M.tech ECE</option>
+                        <option value="Integrated B.tech + M.tech ECE(Data Science)">Integrated B.tech + M.tech ECE(Data Science)</option>
+                        <option value="Integrated B.tech + M.tech ECE(AI and Robotics)">Integrated B.tech + M.tech ECE(AI and Robotics)</option>
+                        <option value="Integrated B.tech + M.tech ECE(VLSI Design)">Integrated B.tech + M.tech ECE(VLSI Design)</option>
+                        <option value="Integrated B.tech + M.tech ECE(Wireless Communication and Networks)">Integrated B.tech + M.tech CSE(Wireless Communication and Networks)</option>
+                        <option value="BCA">BCA</option>
+                        <option value="M.tech CSE(Software Engineering)">M.tech CSE (Software Engineering)</option>
+                        <option value="M.tech CSE(AI and Robotics)">M.tech CSE (AI and Robotics)</option>
+                        <option value="M.tech CSE (Data Science)">M.tech CSE (Data Science)</option>
+                        <option value="M.tech ECE (Wireless Communication and Networks)">M.tech ECE (Wireless Communication and Networks)</option>
+                        <option value="M.tech ECE(VLSI Design)">M.tech ECE (VLSI Design)</option>
+                        <option value="M.tech ECE(Railway Signaling Telecommunication and RAMS)">M.tech ECE (Railway Signaling Telecommunication and RAMS)</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MCA (AI)">MCA (AI)</option>
+                        <option value="MCA (Data Science)">MCA (Data Science)</option>
+                        <option value="M.tech (Information and Communication Technology)">M.tech (Information and Communication Technology)</option>
+                        <option value="PHD (CSE)">PHD (CSE)</option>
+                        <option value="PHD (ECE)">PHD (ECE)</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="year">Year:</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                        <option value="5">5th Year</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="semester">Semester:</label>
+                    <select id="semester" name="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                        <option value="9">Semester 9</option>
+                        <option value="10">Semester 10</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Gen">Gen</option>
+                        <option value="OBC">OBC</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="PH">PH</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="stateDomicile">State Domicile:</label>
+                    <input type="text" id="stateDomicile" name="stateDomicile" placeholder="Enter State Domicile" required>
+                </div>
+                <div class="form-field">
+                    <label for="aadharCard">Aadhar Card Number:</label>
+                    <input type="text" id="aadharCard" name="aadharCard" placeholder="Enter Aadhar Card Number" required>
+                </div>
+        </div>
+
+        <!-- Address Details Section -->
+        <div class="section">
+            <h3>Address Details</h3>
+            <div class="form-field">
+                <label for="permanentAddress">Permanent Address:</label>
+                <input type="text" id="permanentAddress" name="permanentAddress" placeholder="Enter Permanent Address" required>
+            </div>
+            <div class="form-field">
+                <label for="hostelAddress">Hostel Address:</label>
+                <select id="hostelAddress" name="hostelAddress" required>
+                    <option value="">Hostel Address</option>
+                    <option value="Sant Ravi Das Boys Hostel">Sant Ravi Das Boys Hostel</option>
+                    <option value="Guru Ghasi Das Boys Hostel">Guru Ghasi Das Boys Hostel</option>
+                    <option value="Shri Narayan Guru Boys Hostel">Shri Narayan Guru Boys Hostel</option>
+                    <option value="Birsa Munda Hostel Boys">Birsa Munda Hostel Boys</option>
+                    <option value="Sant Kabir Das Hostel Boys">Sant Kabir Das Hostel Boys</option>
+                    <option value="Shri Chatrapati Sahu Ji Maharaj Boys Hostel">Shri Chatrapati Sahu Ji Maharaj Boys Hostel</option>
+                    <option value="Malik Mohd. Jaysi Hostel Boys">Malik Mohd. Jaysi Hostel Boys</option>
+                    <option value="Tulsidas Hostel Boys">Tulsidas Hostel Boys</option>
+                    <option value="Raheem Boys Hostel">Raheem Boys Hostel</option>
+                    <option value="Ram Sharan Das Boys Hostel">Ram Sharan Das Boys Hostel</option>
+                    <option value="Munshi Prem Chand Boys Hostel (New Hostel)">Munshi Prem Chand Boys Hostel (New Hostel)</option>
+                    <option value="Maharshi Valmiki Boys Hostel">Maharshi Valmiki Boys Hostel</option>
+                    <option value="Rani Laxmi Bai Girls Hostel">Rani Laxmi Bai Girls Hostel</option>
+                    <option value="Mahamaya Girls Hostel">Mahamaya Girls Hostel</option>
+                    <option value="Rama Bai Ambedkar Girls Hostel">Rama Bai Ambedkar Girls Hostel</option>
+                    <option value="Savitri Bai Phule Girls Hostel">Savitri Bai Phule Girls Hostel</option>
+                    <option value="Maha Devi Verma Girls Hostel">Maha Devi Verma Girls Hostel</option>
+                    <option value="Ismat Chughtai Girls Hostel">Ismat Chughtai Girls Hostel</option>
+                    <option value="Married Research Scholars Hostel">Married Research Scholars Hostel</option>
+                    <option value="Day Scholar">Day Scholar</option>
+
+                </select>
+            </div>
+  <div class="form-field">
+    <label for="studentContact">Student Contact Number:</label>
+    <input type="text" id="studentContact" name="studentContact" placeholder="Enter Student Contact Number" required pattern="^\d{10}$" maxlength="10" title="Please enter a valid 10-digit contact number.">
+</div>
+<div class="form-field">
+    <label for="studentEmail">Student Email:</label>
+    <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter Student Email" required>
+</div>
+<div class="form-field">
+    <label for="fatherContact">Father's Contact Number:</label>
+    <input type="text" id="fatherContact" name="fatherContact" placeholder="Enter Father's Contact Number" required pattern="^\d{10}$" maxlength="10" title="Please enter a valid 10-digit contact number.">
+</div>
+
+<div class="form-field">
+    <label for="fatherOccupation">Father Occupation:</label>
+    <input type="text" id="fatherOccupation" name="fatherOccupation" placeholder="Enter Father Occupation" required>
+</div>
+<div class="form-field">
+    <label for="fatherEmail">Father Email:</label>
+    <input type="email" id="fatherEmail" name="fatherEmail" placeholder="Enter Father Email" required>
+</div>
+<div class="form-field">
+    <label for="motherContact">Mother's Contact Number:</label>
+    <input type="text" id="motherContact" name="motherContact" placeholder="Enter Mother's Contact Number" required pattern="^\d{10}$" maxlength="10" title="Please enter a valid 10-digit contact number.">
+</div>
+
+<div class="form-field">
+    <label for="motherEmail">Mother Email:</label>
+    <input type="email" id="motherEmail" name="motherEmail" placeholder="Enter Mother Email" required>
+</div>
+
+        </div>
+
+        <!-- Fees Details Section -->
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Fee Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .fee-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .fee-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .fee-item label {
+            font-weight: bold;
+        }
+
+        .fee-item input,
+        .fee-item select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h3>Fees Details</h3>
+            <div class="fee-section">
+
+           <!-- Odd Semester Fee -->
+<div class="fee-item">
+    <label for="oddSemesterAmount">Odd Semester Academic Fee</label>
+    <input type="number" id="oddSemesterAmount" name="oddSemesterAmount" placeholder="Amount" min="0" step="1">
+    
+    <input type="number" id="oddSemesterRemaining" name="oddSemesterRemaining" placeholder="Remaining" min="0" step="1">
+    
+    <select id="oddSemesterDetails" name="oddSemesterDetails">
+        <option value="">Mode</option>
+        <option value="ONLINE">Online</option>
+        <option value="DD">DD</option>
+        <option value="CASH">Cash</option>
+    </select>
+    
+    <input type="text" id="oddSemesterTxnDetails" name="oddSemesterTxnDetails" placeholder="Txn No/DD No/GBU Receipt No">
+    
+    <select id="oddSemesterPlatform" name="oddSemesterPlatform">
+        <option value="">Platform</option>
+        <option value="GBU">GBU</option>
+        <option value="BANK">BANK</option>
+    </select>
+    
+    <label for="oddSemesterDate" class="placeholder">Odd Semester Date</label>
+    <input type="date" id="oddSemesterDate" name="oddSemesterDate">
+</div>
+
+<!-- Even Semester Fee -->
+<div class="fee-item">
+    <label for="evenSemesterAmount">Even Semester Academic Fee</label>
+    <input type="number" id="evenSemesterAmount" name="evenSemesterAmount" placeholder="Amount" min="0" step="1">
+    
+    <input type="number" id="evenSemesterRemaining" name="evenSemesterRemaining" placeholder="Remaining" min="0" step="1">
+    
+    <select id="evenSemesterDetails" name="evenSemesterDetails">
+        <option value="">Mode</option>
+        <option value="ONLINE">Online</option>
+        <option value="DD">DD</option>
+        <option value="CASH">Cash</option>
+    </select>
+    
+    <input type="text" id="evenSemesterTxnDetails" name="evenSemesterTxnDetails" placeholder="Txn No/DD No/GBU Receipt No">
+    
+    <select id="evenSemesterPlatform" name="evenSemesterPlatform">
+        <option value="">Platform</option>
+        <option value="GBU">GBU</option>
+        <option value="BANK">BANK</option>
+    </select>
+    
+    <label for="evenSemesterDate" class="placeholder">Even Semester Date</label>
+    <input type="date" id="evenSemesterDate" name="evenSemesterDate">
+</div>
+
+<!-- Hostel Fee -->
+<div class="fee-item">
+    <label for="hostelAmount">Hostel Fee</label>
+    <input type="number" id="hostelAmount" name="hostelAmount" placeholder="Amount" min="0" step="1">
+    
+    <input type="number" id="hostelRemaining" name="hostelRemaining" placeholder="Remaining" min="0" step="1">
+    
+    <select id="hostelPaymentMode" name="hostelPaymentMode">
+        <option value="">Mode</option>
+        <option value="ONLINE">Online</option>
+        <option value="DD">DD</option>
+        <option value="CASH">Cash</option>
+    </select>
+    
+    <input type="text" id="hostelTxnDetails" name="hostelTxnDetails" placeholder="Txn No/DD No/GBU Receipt No">
+    
+    <select id="hostelPlatform" name="hostelPlatform">
+        <option value="">Platform</option>
+        <option value="GBU">GBU</option>
+        <option value="BANK">BANK</option>
+    </select>
+    
+    <label for="hostelDate" class="placeholder">Hostel Fee Payment Date</label>
+    <input type="date" id="hostelDate" name="hostelDate">
+</div>
+
+<!-- Mess Fee -->
+<div class="fee-item">
+    <label for="messAmount">Mess Fee</label>
+    <input type="number" id="messAmount" name="messAmount" placeholder="Amount" min="0" step="1">
+    
+    <input type="number" id="messRemaining" name="messRemaining" placeholder="Remaining" min="0" step="1">
+    
+    <select id="messPaymentMode" name="messPaymentMode">
+        <option value="">Mode</option>
+        <option value="ONLINE">Online</option>
+        <option value="DD">DD</option>
+        <option value="CASH">Cash</option>
+    </select>
+    
+    <input type="text" id="messTxnDetails" name="messTxnDetails" placeholder="Txn No/DD No/GBU Receipt No">
+    
+    <select id="messPlatform" name="messPlatform">
+        <option value="">Platform</option>
+        <option value="GBU">GBU</option>
+        <option value="BANK">BANK</option>
+    </select>
+    
+    <label for="messDate" class="placeholder">Mess Fee Payment Date</label>
+    <input type="date" id="messDate" name="messDate">
+</div>
+
+            </div>
+
+        
+        <!-- Submit Button -->
+        <div class="form-field">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

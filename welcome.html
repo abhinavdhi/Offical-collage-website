@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #121212 0%, #3e3e3e 100%);
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+        .card-shadow {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .navbar {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .navbar button {
+            background-color: #e50914;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .navbar button:hover {
+            background-color: #b20710;
+        }
+        .card-container {
+            background-color: #1e1e1e;
+            border-radius: 20px;
+            border-top: 5px solid #e50914;
+            padding: 2rem;
+            max-width: 450px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .card-container h2 {
+            color: #e50914;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .card-container p {
+            color: #bbbbbb;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        .card-container button {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .card-container button:hover {
+            background-color: #b20710;
+            transform: translateY(-3px);
+        }
+        .pulse-animation i {
+            color: #e50914;
+        }
+        .pulse-animation i {
+            font-size: 4rem;
+        }
+        .navbar .logo {
+            background-color: #222222;
+            color: #e50914;
+            padding: 1rem;
+            border-radius: 50%;
+        }
+        .details-section {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #dddddd;
+        }
+        .details-section p {
+            margin-bottom: 0.5rem;
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .modal {
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .modal button {
+            background-color: #e50914;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            color: white;
+            border: none;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        .modal button:hover {
+            background-color: #b20710;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <nav class="navbar shadow-lg p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="logo mr-3">
+                <img src="images/GBU logo.png" alt="School Logo" class="h-10 w-10 rounded-full">
+            </div>
+            <span class="text-xl font-bold">School of ICT</span>
+        </div>
+        <button class="flex items-center space-x-2 hover:bg-red-700 px-4 py-2 rounded-full transition" onclick="window.location.href='index.html';">
+            <i class="fas fa-home"></i><span>Home</span>
+        </button>
+    </nav>
+
+    <div class="flex-grow flex items-center justify-center p-4">
+        <div class="card-container card-shadow">
+            <div class="text-red-600 mb-4 pulse-animation">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Submission Successful!</h2>
+            <p>Your registration details have been received.</p>
+
+            <!-- Middle action buttons -->
+            <button onclick="window.location.href='login.php'" class="mt-4 bg-gray-700 hover:bg-gray-600">
+                <i class="fas fa-sign-in-alt mr-2"></i>Download Slip/Login
+            </button>
+            
+            <button onclick="window.location.href='login.php'" class="mt-4 bg-blue-600 hover:bg-blue-500">
+                <i class="fas fa-user-cog mr-2"></i>Go to Student Dashboard
+            </button>
+            <button onclick="openModal()" class="mt-4 bg-yellow-600 hover:bg-yellow-500">
+                <i class="fas fa-info-circle mr-2"></i>View Information
+            </button>
+            <!-- Additional Information -->
+<div class="details-section">
+    <h3 class="text-lg font-semibold text-red-600 mb-2">Next Steps</h3>
+    <p>You can now download your registration slip by logging in. Follow these steps:</p>
+    <ol class="list-decimal list-inside text-gray-300">
+        <li>Login with your roll number and email.</li>
+        <li>An OTP will be sent to your email.</li>
+        <li>Enter the OTP to verify your identity.</li>
+        <li>Once verified, you can download your registration slip.</li>
+    </ol>
+    <p>If you need any assistance, feel free to reach out to our support team via the "Contact Support" button below.</p>
+</div>
+
+
+            <button class="mt-4 bg-blue-800 hover:bg-blue-700">
+                <i class="fas fa-headset mr-2"></i>Contact Support
+            </button>
+        </div>
+    </div>
+
+   <!-- Modal for View More Information -->
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <h3 class="text-2xl font-semibold text-red-600 mb-4">Important Details</h3>
+        <p class="mb-4">Here are the additional instructions and important details for your next steps regarding your registration:</p>
+
+        <h4 class="text-xl font-semibold text-gray-300">Download Your Registration Slip</h4>
+        <p class="text-gray-400 mb-4">Once your application is successfully processed, you can download your registration slip by logging into the portal. You’ll need to verify your identity by entering your roll number and email, after which an OTP will be sent to your email for verification. Upon successful OTP verification, you’ll be able to download the slip.</p>
+
+        <h4 class="text-xl font-semibold text-gray-300">Need Assistance?</h4>
+        <p class="text-gray-400 mb-4">If you need any help with your application or have any questions, our support team is available to assist you. You can reach out to us through the "Contact Support" button below for further assistance.</p>
+
+<button onclick="closeModal()" class="mt-4 bg-gray-700 hover:bg-gray-600 py-2 px-6 rounded-full text-white">
+            Close
+        </button>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('modal-overlay').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

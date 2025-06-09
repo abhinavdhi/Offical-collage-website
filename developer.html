@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the talented development team behind reg.mygbu.in">
+    <title>Our Development Team | reg.mygbu.in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #f44336;
+            --dark-red: #d32f2f;
+            --darker-red: #b71c1c;
+            --background: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --gradient-dark: linear-gradient(145deg, #1a1a1a, #222222);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Particle Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Main Content Container */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header Section */
+        .team-header {
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .team-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(244, 67, 54, 0.3);
+        }
+
+        .team-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        /* Team Member Card */
+        .team-member {
+            background: var(--gradient-dark);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-red), var(--darker-red));
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(244, 67, 54, 0.2);
+        }
+
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            border: 3px solid var(--primary-red);
+            padding: 5px;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .member-info h2 {
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .member-bio {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(244, 67, 54, 0.1);
+            color: var(--primary-red);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid var(--primary-red);
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--primary-red);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-header h1 {
+                font-size: 2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header class="team-header">
+            <h1>Meet Our Development Team</h1>
+            <p>Passionate developers building innovative solutions for a better tomorrow</p>
+        </header>
+
+        <main class="team-grid">
+            <!-- Krishan's Card -->
+            <article class="team-member">
+                <div class="member-image">
+                    <img src="images/krishan.jpg" alt="Krishan" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <h2>Krishan</h2>
+                    <p class="member-role">Full Stack Developer</p>
+                    <p class="member-role">Btech IT</p>
+                    <p class="member-role">225/UIT/029</p>
+                    <p class="member-bio">Gautam Buddha University</p>
+                    <div class="skills">
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Mysql</span>
+                        <span class="skill-tag">Php</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/_krishan__chaudhary/" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/krishan-chauhan-158064345" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Years Exp.</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Abhinav's Card -->
+            <article class="team-member">
+                <div class="member-image">
+                    <img src="images/abhinav.jpg" alt="Abhinav" loading="lazy">
+                </div>
+                <div class="member-info">
+                    <h2>Abhinav</h2>
+                    <p class="member-role">Full Stack Developer</p>
+                    <p class="member-role">Btech IT</p>
+                    <p class="member-role">225/UIT/001</p>
+                    <p class="member-bio">Gautam Buddha University</p>
+                    <div class="skills">
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Mysql</span>
+                        <span class="skill-tag">Php</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/dhiman__abhinav?utm_source=qr&igsh=MTRjcmlweXU3OTRqag==" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="http://www.linkedin.com/in/abhinav-dhiman-97ab6a26b" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Years Exp.</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Gautam Buddha University | Crafted with ❤️ by Krishan & Abhinav</p>
+        </footer>
+    </div>
+
+    <!-- Particles.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 50,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#f44336'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#f44336',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
